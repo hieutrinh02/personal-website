@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import { profile } from "../data/site";
+
+const { title = profile.name, description = profile.tagline } = Astro.props;
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Contact", href: "/contact" }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label={`${profile.name} home`}>
+        {profile.domain}
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        {navItems.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <span>Built with Astro.</span>
+      <span>Hosted on Cloudflare Pages.</span>
+    </footer>
+  </body>
+</html>

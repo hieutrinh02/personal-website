@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/site";
+---
+
+<BaseLayout title={`Contact - ${profile.name}`}>
+  <section class="page-header section">
+    <p class="eyebrow">Contact</p>
+    <h1>Let's talk backend engineering.</h1>
+    <p>
+      The fastest way to reach me is LinkedIn or email. I'm also reachable on GitHub, X, Telegram, and Discord.
+    </p>
+  </section>
+
+  <section class="section contact-list" aria-label="Contact links">
+    <a href={profile.github} target="_blank" rel="noreferrer">
+      <span>GitHub</span>
+      <strong>github.com/hieutrinh02</strong>
+    </a>
+    <a href={profile.linkedin} target="_blank" rel="noreferrer">
+      <span>LinkedIn</span>
+      <strong>linkedin.com/in/hieutrinh02</strong>
+    </a>
+    <a href={profile.x} target="_blank" rel="noreferrer">
+      <span>X</span>
+      <strong>x.com/hieutrinh02</strong>
+    </a>
+    <a href={profile.emailHref}>
+      <span>Email</span>
+      <strong>{profile.email}</strong>
+    </a>
+    <div class="contact-item">
+      <span>Discord</span>
+      <strong>{profile.discord}</strong>
+    </div>
+    <a href={profile.telegramHref} target="_blank" rel="noreferrer">
+      <span>Telegram</span>
+      <strong>{profile.telegram}</strong>
+    </a>
+  </section>
+</BaseLayout>

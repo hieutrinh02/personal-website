@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { backendProjects, profile, securityArchive } from "../data/site";
+---
+
+<BaseLayout title={`${profile.name} - ${profile.title}`}>
+  <section class="hero section">
+    <p class="eyebrow">Hi, I'm Trịnh Trung Hiếu.</p>
+    <h1>Golang Backend Engineer.</h1>
+    <p class="hero-copy">
+      I like building things that work at scale.
+    </p>
+    <div class="button-row">
+      <a class="button primary" href="#projects">View Projects</a>
+      <a class="button secondary" href="/contact">Contact</a>
+    </div>
+  </section>
+
+  <section class="section about-section" aria-labelledby="about-title">
+    <h2 id="about-title">About</h2>
+    <div class="measure">
+      <p>Currently focused on Golang backend engineering, with interests in distributed systems, backend architecture, databases, and cloud infrastructure.</p>
+      <p>I enjoy turning complex problems into simple, maintainable systems and continuously learning how large-scale software is designed and operated.</p>
+      <p>My goal is to become a stronger engineer by building real systems, understanding their trade-offs, and improving them over time.</p>
+    </div>
+  </section>
+
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <h2 id="projects-title">Featured Projects</h2>
+    </div>
+    <div class="project-grid">
+      {backendProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="section archive-section" aria-labelledby="archive-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="archive-title">Blockchain & Security Archive</h2>
+        <p>Earlier blockchain and security work that shaped how I think about correctness, protocols, and system reliability.</p>
+      </div>
+    </div>
+    <div class="archive-grid">
+      {securityArchive.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="section contact-band" aria-labelledby="contact-title">
+    <div>
+      <h2 id="contact-title">Contact</h2>
+    </div>
+    <div class="link-row">
+      <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+      <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href={profile.x} target="_blank" rel="noreferrer">X</a>
+      <a href={profile.telegramHref} target="_blank" rel="noreferrer">Telegram</a>
+      <a href={profile.emailHref}>Email</a>
+    </div>
+  </section>
+</BaseLayout>
