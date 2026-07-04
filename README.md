@@ -29,3 +29,7 @@ Cloudflare Pages:
 
 - Build command: `npm run build`
 - Build output directory: `dist`
+
+## License
+
+Code is licensed under the MIT License. Personal content, project descriptions, and branding are not licensed for reuse.
