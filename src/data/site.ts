@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Hieu Trinh",
+  name: "Trịnh Trung Hiếu",
   title: "Golang Backend Engineer",
   tagline:
     "Golang Backend Engineer focused on reliable systems, databases, messaging, and cloud infrastructure.",
