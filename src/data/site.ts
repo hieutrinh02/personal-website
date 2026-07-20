@@ -18,11 +18,11 @@ export const backendProjects = [
   {
     name: "go-order-service",
     description:
-      "A production-inspired order and payment backend with authentication, idempotent APIs, reliable event publishing, and AWS deployment.",
+      "A production-inspired order and payment backend with authentication, idempotent APIs, a transactional outbox, Kafka-based event processing, and automated AWS deployment.",
     tags: [
       "Go",
       "PostgreSQL",
-      "NATS",
+      "Kafka",
       "Redis",
       "Docker",
       "AWS EC2",
