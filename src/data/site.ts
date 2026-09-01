@@ -18,19 +18,20 @@ export const backendProjects = [
   {
     name: "go-order-service",
     description:
-      "A production-inspired order and payment backend with authentication, idempotent APIs, a transactional outbox, Kafka-based event processing, and automated AWS deployment.",
+      "A production-inspired order and payment system with idempotent APIs, transactional outbox messaging, Kafka-based event processing, observability, and automated K3s deployment on AWS EC2.",
     tags: [
       "Go",
       "PostgreSQL",
       "Kafka",
       "Redis",
+      "Kubernetes",
+      "K3s",
       "Docker",
       "AWS EC2",
       "GitHub Actions",
-      "JWT",
-      "Outbox Pattern",
       "Prometheus",
-      "Grafana"
+      "Grafana",
+      "Outbox Pattern"
     ],
     links: [
       { label: "GitHub", href: "https://github.com/hieutrinh02/go-order-service" }
